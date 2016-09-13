@@ -1,0 +1,5 @@
+/**
+ * Implements hook_<hook_name><hook_signature>.
+ */
+function <hook_template>_<hook_name><hook_signature> {
+}
