@@ -17,6 +17,11 @@ Plug 'jacks0n/Drupal-Hook-Generator.vim', { 'for': 'php' }
 
 ## Usage
 
+Generate ctags from the root of the code. Example:
+```
+ctags --langmap=php:.engine.inc.module.theme.install.php --php-kinds=cdfi --languages=php --recurse --fields=+aimlS
+```
+
 ```vim
 " Call the hook generator command directly.
 :GenerateDrupalHook

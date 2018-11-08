@@ -79,7 +79,10 @@ function! s:GetDrupalTemplate(dirpath)
   let l:dirpath = a:dirpath
   while 1
     " Search (and return the basename if found) for an info file.
-    let l:info_file = globpath(l:dirpath, '*.info')
+    let l:info_file = globpath(l:dirpath, '*.info.yml')
+    if l:info_file == ''
+      let l:info_file = globpath(l:dirpath, '*.info')
+    endif
     if l:info_file != ''
       return fnamemodify(l:dirpath, ':t:r')
     endif
